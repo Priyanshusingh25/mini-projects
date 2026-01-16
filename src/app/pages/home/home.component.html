@@ -1,0 +1,28 @@
+<section class="main-section" (mouseenter)="pawVideo.play()" (mouseleave)="pawVideo.pause(); pawVideo.currentTime = 0">
+
+    <div class="logo">
+        <a>
+            <img onclick="goToHome()" src="assets/logo/pawminati-logo.jpg" alt="Pawminati Logo" />
+        </a>
+    </div>
+
+    <div class="nav-menu">
+        <input class="nav-search" type="text" placeholder="Search">
+        <a class="nav-item" (click)="goToDogverse()">Dogverse</a>
+        <a class="nav-item" (click)="goToCatverse()">Catverse</a>
+        <a class="nav-item" (click)="goToAbout()">About</a>
+        <a class="nav-item" (click)="goToOthers()">Others</a>
+    </div>
+
+    <div class="image-container">
+        <img src="assets/images/pawengers-cartoon.png" alt="pawengers cartoon" />
+    </div>
+
+    <div class="video-container">
+        <video #pawVideo muted loop class="main-video" src="/assets/videos/pawengers-fighting.mp4"></video>
+    </div>
+</section>
+
+<div class="footer">
+    <app-footer></app-footer>
+</div>
